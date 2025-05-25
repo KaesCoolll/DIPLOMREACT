@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  padding: 10px;
+}
+
+.header {
+  max-width: 1200px;/* ограничиваем ширину */
+  margin: 12px auto 0 auto;/* центрируем блок по горизонтали */
+  padding: 0 20px;/* уменьшите padding для адаптивности */
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;/* учитываем padding в ширине */
+}
+
+
+.logo {
+  width: 55px;
+  height: 55px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  gap: 0px;
+  /* расстояние между картинкой и текстом */
+  padding-left: 15px;
+  /* небольшой отступ слева, если нужно */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav_item0 {
+  margin-left: 15px;
+  font-size: 1.8rem;
+  /* увеличенный размер */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #0066ff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav_item {
+  margin: 0 0 0 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #0066ff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav_item:hover {
+  color: gray;
+}
+
+.nav_item1 {
+  margin: 0 0 0 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #0066ff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav_item1:hover {
+  color: gray;
+}
+
+.nav_item2 {
+  margin: 0 0 0 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #0066ff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav_item2:hover {
+  color: gray;
+}
+
+.nav_item3 {
+  margin: 0 0 0 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #0066ff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav_item3:hover {
+  color: gray;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  color: rgb(87, 82, 82);
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  /* Равномерное распределение */
+  gap: 40px;
+  /* Отступы между блоками */
+  flex-wrap: wrap;
+  /* Чтобы на маленьких экранах картинки переходили на новую строку */
+}
+
+.image-item {
+  flex: 1 1 0%;
+  /* Каждый блок занимает примерно треть ширины, с возможностью сжиматься */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  /* Текст под картинкой выровнен по левому краю */
+}
+
+.image-item img {
+  width: 100px;
+  /* или нужный вам размер */
+  height: auto;
+  margin-bottom: 15px;
+
+  /* Убираем скругления и тени */
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  /* если есть рамка */
+}
+
+
+
+
+.caption {
+  font-weight: 700;
+  /* жирный шрифт */
+  font-size: 1.1rem;
+  /* чуть больше обычного */
+  color: #0066ff;
+  margin: 0 0 8px 0;
+  /* отступ снизу */
+  text-align: center;
+}
+
+.caption-text {
+  font-weight: 400;
+  /* обычный шрифт */
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+  text-align: justify;
+}
+
+.banner-slider {
+  position: relative;
+  width: 900px;
+  /* увеличена ширина */
+  height: 500px;
+  /* увеличена высота */
+  margin: 40px auto 60px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+  background: #000;
+}
+
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  /* подпись внизу */
+  padding-bottom: 28px;
+  /* отступ снизу для подписи */
+}
+
+.banner.hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.banner-caption {
+  position: relative;
+  z-index: 1;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 8px 32px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.faq-section {
+  max-width: 900px;
+  margin: 60px auto 80px auto;
+  padding: 0 20px;
+}
+
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background: #fafafa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+  width: 100%;
+  background: #0066ff;
+  color: white;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  text-align: left;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.accordion-header:hover {
+  background: #004bb5;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background: white;
+  padding: 0 20px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  border-top: 1px solid #ccc;
+}
+
+.accordion-content p {
+  margin: 15px 0;
+}
+
+/* Класс для раскрытого аккордеона */
+.accordion.active .accordion-content {
+  max-height: 500px;
+  padding: 15px 20px;
+}
+
+/* Мой футер */
+.site-footer {
+  background-color: #0066ff;
+  color: #fff;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-container h3 {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.footer-container p {
+  margin: 6px 0;
+}
+
+.footer-container a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-container a:hover {
+  color: #cce4ff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+/* Основные стили для липкого футера */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Занимает всю высоту экрана */
+}
+
+.main-content {
+  flex: 1 0 auto; /* Растягивается на всё доступное пространство */
+  padding: 20px 0;
+  width: 100%;
+  max-width: 1200px; /* Если нужно ограничить ширину контента */
+  margin: 0 auto; /* Центрирование контента */
+}
+
+/* Стили для футера */

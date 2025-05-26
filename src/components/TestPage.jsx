@@ -412,7 +412,7 @@ function getTestName(testId) {
     'javascript': 'JavaScript',
     'react': 'React',
     'webpack': 'Webpack & Бандлеры',
-    'performance': 'Оптимизация'
+    'performance': 'Оптимизация и производительность'
   };
   return names[testId] || testId;
 }

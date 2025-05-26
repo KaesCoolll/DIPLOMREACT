@@ -12,8 +12,8 @@ function Header() {
       <div className="nav">
         <a className="nav_item" href="/">Главная</a>
         <Link to="/testirovanie" className="nav_item1">Тестирование</Link>
-        <a className="nav_item2" href="/materials">Учебные материалы</a>
-        <a className="nav_item3" href="/sovety">Советы</a>
+        <Link to="/materials" className="nav_item2">Учебные материалы</Link>
+        <Link to="/tips" className="nav_item3">Советы</Link>
       </div>
     </header>
   );

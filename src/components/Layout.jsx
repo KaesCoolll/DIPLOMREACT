@@ -8,7 +8,7 @@ function Layout() {
     <div className="app-layout">
       <Header />
       <main className="main-content">
-        <Outlet /> {/* Сюда подставляются страницы */}
+        <Outlet /> 
       </main>
       <Footer />
     </div>

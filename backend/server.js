@@ -6,8 +6,19 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 
 const app = express();
+
+app.use(cors({
+  origin: 'http://localhost:3000', // адрес вашего фронтенда
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true, // если используете куки или авторизацию
+}));
+
 app.use(express.json());
-app.use(cors());
+
+// Далее маршруты
+
+
 
 // Подключение к PostgreSQL
 const pool = new Pool({

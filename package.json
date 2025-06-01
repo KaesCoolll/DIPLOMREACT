@@ -2,6 +2,7 @@
   "name": "fronttest-react",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -46,6 +47,7 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "src/index.js",
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KaesCoolll/DIPLOMREACT.git"
@@ -55,6 +57,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KaesCoolll/DIPLOMREACT/issues"
-  },
-  "homepage": "https://github.com/KaesCoolll/DIPLOMREACT#readme"
+  }
 }

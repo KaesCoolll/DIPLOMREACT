@@ -32,6 +32,8 @@ body {
 .nav {
   display: flex;
   align-items: center;
+  gap: 40px; /* расстояние между пунктами меню */
+  margin-left: 40px; /* отступ от логотипа */
 }
 
 .nav_item0 {
@@ -75,13 +77,15 @@ body {
 }
 
 .nav_item2 {
-  margin: 0 0 0 100px;
+  margin: 0 0 0 100px; /* Уменьшенный отступ слева */
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: #0066ff;
   font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
+  white-space: nowrap; /* Запрет переноса текста */
+  padding: 8px 0; /* Добавляем вертикальные отступы */
 }
 
 .nav_item2:hover {
@@ -100,6 +104,77 @@ body {
 
 .nav_item3:hover {
   color: gray;
+}
+
+/* Выталкиваем правый блок с кнопками вправо */
+.nav-right {
+  margin-left: 130px; /* вытолкнуть вправо */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* расстояние между кнопками */
+}
+
+
+/* Общие стили для кнопок */
+.btn {
+  padding: 8px 18px;
+  border-radius: 25px; /* закругленные края */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Кнопка Вход */
+.btn-login {
+  background-color: #0066ff;
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: #004bb5;
+}
+
+/* Кнопка Регистрация */
+.btn-register {
+  background-color: transparent;
+  color: #0066ff;
+  border: 2px solid #0066ff;
+}
+
+.btn-register:hover {
+  background-color: #0066ff;
+  color: white;
+}
+
+/* Кнопка Профиль */
+.btn-profile {
+  background-color: #0066ff;
+  color: white;
+}
+
+.btn-profile:hover {
+  background-color: #004bb5;
+}
+
+/* Кнопка Выйти */
+.btn-logout {
+  background-color: transparent;
+  color: #0066ff;
+  border: 2px solid #0066ff;
+  padding: 8px 16px;
+}
+
+.btn-logout:hover {
+  background-color: #0066ff;
+  color: white;
 }
 
 .main {

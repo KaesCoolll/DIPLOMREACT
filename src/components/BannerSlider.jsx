@@ -23,7 +23,7 @@ function BannerSlider() {
   useEffect(() => {
     const interval = setInterval(nextBanner, 10000);
     return () => clearInterval(interval);
-  }, [nextBanner]);
+  }, []);
 
   return (
     <div className="banner-slider">

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/testirovanie.css'; // Подключаем стили
-
+import { useAuth } from '../context/AuthContext';
 
 const TestPage = () => {
-  const timerRef = useRef(null);
+  const { user, saveTestResult } = useAuth();
   const tests = {
     "html-css": [
       {
@@ -269,6 +269,7 @@ const TestPage = () => {
 
   const [activeTest, setActiveTest] = useState('html-css');
   const [testStates, setTestStates] = useState({});
+  const timerRef = useRef(null);
 
   useEffect(() => {
     return () => {
@@ -312,7 +313,7 @@ const TestPage = () => {
       };
     });
 
-    
+
     timerRef.current = setTimeout(() => {
       setTestStates(prev => {
         const currentState = prev[testId] || getInitialTestState(testId);
@@ -399,6 +400,18 @@ const TestPage = () => {
           <div className="result">
             Тест завершён!<br />
             Правильных ответов: {currentState.correctCount} из {currentState.total}
+            {user && (
+              <button
+                onClick={() => saveTestResult(
+                  activeTest,
+                  currentState.correctCount,
+                  currentState.total
+                )}
+                className="save-result-button"
+              >
+                Сохранить результат
+              </button>
+            )}
           </div>
         )}
       </section>

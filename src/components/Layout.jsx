@@ -2,16 +2,19 @@ import Header from './Header';
 import Footer from './Footer';
 import { Outlet } from 'react-router-dom';
 import '../styles/main.css';
+import { AuthProvider } from '../context/AuthContext';
 
 function Layout() {
   return (
-    <div className="app-layout">
-      <Header />
-      <main className="main-content">
-        <Outlet /> 
-      </main>
-      <Footer />
-    </div>
+    <AuthProvider>
+      <div className="app-layout">
+        <Header />
+        <main className="main-content">
+          <Outlet /> {/* Сюда подставляются страницы */}
+        </main>
+        <Footer />
+      </div>
+    </AuthProvider>
   );
 }
 

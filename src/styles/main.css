@@ -1,17 +1,19 @@
 body {
   margin: 0;
   padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  background: #f9faff;
+  color: #333;
 }
 
 .header {
-  max-width: 1200px;/* ограничиваем ширину */
-  margin: 12px auto 0 auto;/* центрируем блок по горизонтали */
-  padding: 0 20px;/* уменьшите padding для адаптивности */
+  max-width: 1200px;
+  margin: 12px auto 0 130px; 
+  padding: 0 20px;
   display: flex;
   align-items: center;
-  box-sizing: border-box;/* учитываем padding в ширине */
+  box-sizing: border-box;
 }
-
 
 .logo {
   width: 55px;
@@ -19,106 +21,62 @@ body {
 }
 
 .logo-link {
-  display: flex;
-  align-items: center;
   text-decoration: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   gap: 0px;
-  /* расстояние между картинкой и текстом */
   padding-left: 15px;
-  /* небольшой отступ слева, если нужно */
+  margin-right: 57px;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 40px; /* расстояние между пунктами меню */
-  margin-left: 40px; /* отступ от логотипа */
+  gap: 40px;
+  margin-left: 40px;
+}
+
+.nav_item, .nav_item0, .nav_item1, .nav_item2, .nav_item3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #0066ff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap; 
 }
 
 .nav_item0 {
   margin-left: 15px;
   font-size: 1.8rem;
-  /* увеличенный размер */
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 700;
-  text-decoration: none;
-  color: #0066ff;
-  cursor: pointer;
-  transition: color 0.3s ease;
 }
 
-.nav_item {
-  margin: 0 0 0 100px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #0066ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
+.nav_item  { margin: 0 0 0 100px; }
+.nav_item1 { margin: 0 0 0 100px; }
+.nav_item2 { margin: 0 0 0 100px; }
+.nav_item3 { margin: 0 0 0 100px; }
 
-.nav_item:hover {
-  color: gray;
-}
-
-.nav_item1 {
-  margin: 0 0 0 100px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #0066ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav_item1:hover {
-  color: gray;
-}
-
-.nav_item2 {
-  margin: 0 0 0 100px; /* Уменьшенный отступ слева */
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #0066ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  white-space: nowrap; /* Запрет переноса текста */
-  padding: 8px 0; /* Добавляем вертикальные отступы */
-}
-
-.nav_item2:hover {
-  color: gray;
-}
-
-.nav_item3 {
-  margin: 0 0 0 100px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #0066ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
+.nav_item:hover, 
+.nav_item1:hover, 
+.nav_item2:hover, 
 .nav_item3:hover {
-  color: gray;
+color: #004bb5;
 }
 
-/* Выталкиваем правый блок с кнопками вправо */
 .nav-right {
-  margin-left: 130px; /* вытолкнуть вправо */
+  margin-left: 187px;
   display: flex;
   align-items: center;
-  gap: 15px; /* расстояние между кнопками */
+  gap: 15px;
 }
-
 
 /* Общие стили для кнопок */
 .btn {
   padding: 8px 18px;
-  border-radius: 25px; /* закругленные края */
+  border-radius: 25px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -132,7 +90,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Кнопка Вход */
 .btn-login {
   background-color: #0066ff;
   color: white;
@@ -142,7 +99,6 @@ body {
   background-color: #004bb5;
 }
 
-/* Кнопка Регистрация */
 .btn-register {
   background-color: transparent;
   color: #0066ff;
@@ -154,7 +110,6 @@ body {
   color: white;
 }
 
-/* Кнопка Профиль */
 .btn-profile {
   background-color: #0066ff;
   color: white;
@@ -164,7 +119,6 @@ body {
   background-color: #004bb5;
 }
 
-/* Кнопка Выйти */
 .btn-logout {
   background-color: transparent;
   color: #0066ff;
@@ -195,56 +149,47 @@ body {
   margin: 0 auto 40px auto;
 }
 
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #0066ff;
+}
+
 .image-row {
   display: flex;
-  justify-content: space-between;
-  /* Равномерное распределение */
-  gap: 40px;
-  /* Отступы между блоками */
-  flex-wrap: wrap;
-  /* Чтобы на маленьких экранах картинки переходили на новую строку */
+  justify-content: space-between; 
+  gap: 40px; 
+  flex-wrap: wrap; 
 }
 
 .image-item {
-  flex: 1 1 0%;
-  /* Каждый блок занимает примерно треть ширины, с возможностью сжиматься */
+  flex: 1 1 0%; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
-  /* Текст под картинкой выровнен по левому краю */
+  text-align: left; 
 }
 
 .image-item img {
-  width: 100px;
-  /* или нужный вам размер */
+  width: 100px;  
   height: auto;
-  margin-bottom: 15px;
-
-  /* Убираем скругления и тени */
+  margin-bottom: 15px; 
   border-radius: 0;
   box-shadow: none;
-  border: none;
-  /* если есть рамка */
+  border: none;  
 }
 
-
-
-
 .caption {
-  font-weight: 700;
-  /* жирный шрифт */
-  font-size: 1.1rem;
-  /* чуть больше обычного */
+  font-weight: 700; 
+  font-size: 1.1rem; 
   color: #0066ff;
-  margin: 0 0 8px 0;
-  /* отступ снизу */
+  margin: 0 0 8px 0; 
   text-align: center;
 }
 
 .caption-text {
-  font-weight: 400;
-  /* обычный шрифт */
+  font-weight: 400; 
   font-size: 1rem;
   color: #555;
   line-height: 1.4;
@@ -254,10 +199,8 @@ body {
 
 .banner-slider {
   position: relative;
-  width: 900px;
-  /* увеличена ширина */
-  height: 500px;
-  /* увеличена высота */
+  width: 900px; 
+  height: 500px;  
   margin: 40px auto 60px auto;
   overflow: hidden;
   border-radius: 12px;
@@ -278,10 +221,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  /* подпись внизу */
-  padding-bottom: 28px;
-  /* отступ снизу для подписи */
+  justify-content: flex-end; 
+  padding-bottom: 28px; 
 }
 
 .banner.hidden {
@@ -399,7 +340,6 @@ body {
   margin: 15px 0;
 }
 
-/* Класс для раскрытого аккордеона */
 .accordion.active .accordion-content {
   max-height: 500px;
   padding: 15px 20px;
@@ -451,7 +391,8 @@ body {
   font-size: 0.9rem;
   opacity: 0.8;
 }
-/* Основные стили для липкого футера */
+
+/* Липкий футер */
 html, body, #root {
   height: 100%;
   margin: 0;
@@ -461,15 +402,13 @@ html, body, #root {
 .app-layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Занимает всю высоту экрана */
+  min-height: 100vh;
 }
 
 .main-content {
-  flex: 1 0 auto; /* Растягивается на всё доступное пространство */
+  flex: 1 0 auto;
   padding: 20px 0;
   width: 100%;
-  max-width: 1200px; /* Если нужно ограничить ширину контента */
-  margin: 0 auto; /* Центрирование контента */
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-/* Стили для футера */

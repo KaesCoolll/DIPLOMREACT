@@ -1,5 +1,5 @@
 .tips-page {
-  background: #f9faff; /* как в основном стиле */
+  background: #f9faff; 
   min-height: 100vh;
   padding: 2rem 0;
 }
@@ -12,15 +12,15 @@
 
 .tips-title {
   text-align: center;
-  color: #0066ff; /* основной цвет */
+  color: #0066ff; 
   margin-bottom: 2rem;
   font-size: 2rem;
 }
 
 .tip-card {
   background: #fff;
-  border-radius: 12px; /* увеличен радиус */
-  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.1); /* согласованная тень */
+  border-radius: 12px; 
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.1); 
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -32,11 +32,11 @@
 }
 
 .tip-card h3 {
-  color: #0066ff; /* основной цвет */
+  color: #0066ff; 
   margin-bottom: 0.8rem;
 }
 
 .tip-card p {
-  color: rgb(87, 82, 82); /* как в основном стиле */
+  color: rgb(87, 82, 82); 
   line-height: 1.6;
 }

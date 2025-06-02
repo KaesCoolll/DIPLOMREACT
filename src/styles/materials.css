@@ -1,112 +1,8 @@
-body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  background: #f9faff;
-  color: #333;
-}
-
-.header {
-  max-width: 1200px;/* ограничиваем ширину */
-  margin: 12px auto 0 auto;/* центрируем блок по горизонтали */
-  padding: 0 20px;/* уменьшите padding для адаптивности */
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;/* учитываем padding в ширине */
-}
-
-
-.logo {
-  width: 55px;
-  height: 55px;
-}
-
-.logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  cursor: pointer;
-  gap: 0px;
-  /* расстояние между картинкой и текстом */
-  padding-left: 15px;
-  /* небольшой отступ слева, если нужно */
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav_item0 {
-  margin-left: 15px;
-  font-size: 1.8rem;
-  /* увеличенный размер */
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  color: #0066ff;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav_item {
-  margin: 0 0 0 100px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #0066ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav_item:hover {
-  color: gray;
-}
-
-.nav_item1 {
-  margin: 0 0 0 100px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #0066ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav_item1:hover {
-  color: gray;
-}
-
-
-.nav_item2:hover {
-  color: gray;
-}
-
-.nav_item3 {
-  margin: 0 0 0 100px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #0066ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav_item3:hover {
-  color: gray;
-}
-
 /* Контейнер учебных материалов */
 .materials-main {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
-}
-
-.page-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #0066ff;
-  text-align: center;
 }
 
 .materials-container {
@@ -211,4 +107,3 @@ body {
     padding: 20px 12px;
   }
 }
-

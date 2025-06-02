@@ -3,14 +3,14 @@
   margin: 2rem auto;
   padding: 2rem;
   background: #fff;
-  border-radius: 12px; /* увеличен радиус */
-  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.1); /* согласованная тень */
+  border-radius: 12px; 
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.1); 
 }
 
 .auth-container h2 {
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #0066ff; /* основной цвет */
+  color: #0066ff;
 }
 
 .form-group {

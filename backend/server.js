@@ -8,19 +8,15 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000', // адрес вашего фронтенда
+  origin: 'http://localhost:3000', 
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true, // если используете куки или авторизацию
+  credentials: true,
 }));
 
 app.use(express.json());
 
-// Далее маршруты
-
-
-
-// Подключение к PostgreSQL
+// Postgre
 const pool = new Pool({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
@@ -29,7 +25,7 @@ const pool = new Pool({
   port: process.env.DB_PORT,
 });
 
-// Регистрация нового пользователя
+// Регистрация
 app.post('/api/register', async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -43,11 +39,20 @@ app.post('/api/register', async (req, res) => {
     res.status(201).json(result.rows[0]);
   } catch (error) {
     console.error(error);
+    
+    if (error.code === '23505' && error.constraint === 'users_email_key') {
+      return res.status(400).json({ error: 'Пользователь с такой почтой уже зарегистрирован' });
+    }
+    
+    if (error.code === '23505' && error.constraint === 'users_username_key') {
+      return res.status(400).json({ error: 'Пользователь с таким именем уже существует' });
+    }
+    
     res.status(500).json({ error: error.message });
   }
 });
 
-// Авторизация пользователя
+// Авторизация 
 app.post('/api/login', async (req, res) => {
   try {
     const { email, password } = req.body;

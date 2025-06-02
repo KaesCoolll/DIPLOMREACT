@@ -1,126 +1,3 @@
-body {
-  margin: 0;
-}
-
-.header {
-  max-width: 1200px;
-  /* ограничиваем ширину */
-  margin: 12px auto 0 auto;
-  /* центрируем блок по горизонтали */
-  padding: 0 20px;
-  /* уменьшите padding для адаптивности */
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  /* учитываем padding в ширине */
-}
-
-
-.logo {
-  width: 55px;
-  height: 55px;
-}
-
-.logo-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  cursor: pointer;
-  gap: 0px;
-  /* расстояние между картинкой и текстом */
-  padding-left: 15px;
-  /* небольшой отступ слева, если нужно */
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav_item0 {
-  margin-left: 15px;
-  font-size: 1.8rem;
-  /* увеличенный размер */
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  color: #0066ff;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav_item {
-  margin: 0 0 0 100px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #0066ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav_item:hover {
-  color: gray;
-}
-
-.nav_item1 {
-  margin: 0 0 0 100px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #0066ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav_item1:hover {
-  color: gray;
-}
-
-
-.nav_item2:hover {
-  color: gray;
-}
-
-.nav_item3 {
-  margin: 0 0 0 100px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #0066ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav_item3:hover {
-  color: gray;
-}
-
-.main {
-  max-width: 1200px;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.main-title {
-  font-size: 1.5rem;
-  color: rgb(87, 82, 82);
-  max-width: 800px;
-  text-align: center;
-  line-height: 1.4;
-  margin-bottom: 40px;
-  margin: 0 auto 40px auto;
-}
-
-.page-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  text-align: center;
-  color: #0066ff;
-}
-
 .test-menu {
   display: flex;
   justify-content: center;
@@ -151,10 +28,6 @@ body {
 }
 
 .test-content {
-  background: white;
-  border-radius: 12px;
-  padding: 30px 40px;
-  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.1);
   min-height: 350px;
 }
 
@@ -213,7 +86,6 @@ body {
   height: 18px;
 }
 
-/* Результат */
 .result {
   text-align: center;
   font-size: 1.3rem;
@@ -222,7 +94,7 @@ body {
   margin-top: 40px;
 }
 
-/* Правильный ответ - зелёный фон и галочка */
+/* Зелёный фон и галочка */
 .answer-correct {
   background-color: #d4edda;
   color: #155724;
@@ -242,7 +114,7 @@ body {
   font-size: 18px;
 }
 
-/* Неправильный ответ - красный фон и крестик */
+/* Красный фон и крестик */
 .answer-wrong {
   background-color: #f8d7da;
   color: #721c24;
@@ -260,53 +132,6 @@ body {
   font-weight: bold;
   color: #721c24;
   font-size: 18px;
-}
-
-.site-footer {
-  background-color: #0066ff;
-  /* Цвет в стиле сайта */
-  color: #fff;
-  padding: 30px 20px;
-  font-family: Arial, sans-serif;
-  font-size: 1rem;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.footer-container h3 {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.footer-container p {
-  margin: 6px 0;
-}
-
-.footer-container a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-container a:hover {
-  color: #cce4ff;
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  max-width: 1200px;
-  margin: 20px auto 0 auto;
-  text-align: center;
-  font-size: 0.9rem;
-  opacity: 0.8;
 }
 
 /* Кастомные радио-кнопки */
@@ -359,7 +184,3 @@ body {
 .hidden-radio:focus + .custom-radio {
   box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.3);
 }
-
-/* Оставьте все остальные стили как были */
-
-

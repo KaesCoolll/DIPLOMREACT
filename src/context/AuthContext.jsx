@@ -12,8 +12,6 @@ export const AuthProvider = ({ children }) => {
     const verifyToken = async () => {
       if (token) {
         try {
-          // Здесь можно добавить запрос для проверки токена
-          // и получения данных пользователя
           const userData = JSON.parse(localStorage.getItem('user'));
           setUser(userData);
         } catch (error) {

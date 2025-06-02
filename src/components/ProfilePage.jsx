@@ -67,7 +67,6 @@ const ProfilePage = () => {
   );
 };
 
-// Используем существующую функцию getTestName
 function getTestName(testId) {
   const names = {
     'html-css': 'HTML & CSS',

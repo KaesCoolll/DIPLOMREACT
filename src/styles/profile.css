@@ -2,9 +2,6 @@
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #fff;
-  border-radius: 12px; /* увеличен радиус */
-  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.1); /* согласованная тень */
 }
 
 .profile-info {
@@ -13,22 +10,6 @@
   border-bottom: 1px solid #eee;
 }
 
-.logout-button {
-  padding: 0.5rem 1rem;
-  background-color: #0066ff; /* основной цвет сайта */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: background 0.3s; /* добавлен переход */
-}
-
-.logout-button:hover {
-  background-color: #004bb5; /* темнее при наведении */
-}
-
-/* Остальные стили оставить как есть */
 .results-table {
   margin-top: 1rem;
   overflow-x: auto;

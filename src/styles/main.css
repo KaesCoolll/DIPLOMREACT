@@ -7,12 +7,19 @@ body {
 }
 
 .header {
-  max-width: 1200px;
-  margin: 12px auto 0 130px; 
+  font-family: 'Montserrat', sans-serif;
   padding: 0 20px;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
+ 
+}
+
+.svg {
+display: flex;
+align-items: center;
+justify-content: space-between;
+max-width: 1700px;
+padding: 0.7% 2rem;
+margin: 0 auto;
+gap: 1rem;
 }
 
 .logo {
@@ -26,15 +33,13 @@ body {
   display: flex;
   align-items: center;
   gap: 0px;
-  padding-left: 15px;
-  margin-right: 57px;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 40px;
-  margin-left: 40px;
+  gap: 150px;
+  margin:0 0 0 1.6%;
 }
 
 .nav_item, .nav_item0, .nav_item1, .nav_item2, .nav_item3 {
@@ -54,11 +59,6 @@ body {
   font-weight: 700;
 }
 
-.nav_item  { margin: 0 0 0 100px; }
-.nav_item1 { margin: 0 0 0 100px; }
-.nav_item2 { margin: 0 0 0 100px; }
-.nav_item3 { margin: 0 0 0 100px; }
-
 .nav_item:hover, 
 .nav_item1:hover, 
 .nav_item2:hover, 
@@ -67,9 +67,8 @@ color: #004bb5;
 }
 
 .nav-right {
-  margin-left: 187px;
   display: flex;
-  align-items: center;
+  flex: 0 0 0 0;
   gap: 15px;
 }
 
